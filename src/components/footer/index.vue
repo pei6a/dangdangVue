@@ -21,16 +21,13 @@ export default {
 
             ],
             activeinfo:0,
+            // props:['val']
         }
     },
     methods:{
         handlerfooter(index){
                 this.activeinfo=index
-                if(index===0){
-                    this.$router.push("/")
-                }else if(index===1){
-                    this.$router.push("/dd_category")
-                }
+                
         }
     }
 }
@@ -39,12 +36,15 @@ export default {
 <style>
     .foot{
         width: 100%;
-        position: absolute;
+        position: fixed;
         bottom:0;
-        height: 0.45rem;
+        height: 0.44rem;
         border-top:1px solid #ccc;
         display: flex;
         justify-content: space-around;
+        /* 改成了固定定位，增加了background */
+        background:#fff;
+        /* z-index:999 */
     }
     .footcent{
         display:flex;
